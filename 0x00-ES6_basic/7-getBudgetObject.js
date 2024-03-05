@@ -1,2 +1,4 @@
 #!/usr/bin/node
-export default (income, gdp, capita) => ({ income, gdp, capita });
+export default function getBudgetObject(income, gdp, capita) {
+  return { income, gdp, capita };
+}
