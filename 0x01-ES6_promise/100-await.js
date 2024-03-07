@@ -1,7 +1,7 @@
 #!/usr/bin/node
 import { uploadPhoto, createUser } from './utils';
 
-export async function asyncUploadUser() {
+async function asyncUploadUser() {
   try {
     const photo = await uploadPhoto();
     const user = await createUser();
@@ -10,3 +10,5 @@ export async function asyncUploadUser() {
     return { photo: null, user: null };
   }
 }
+
+export default asyncUploadUser;
