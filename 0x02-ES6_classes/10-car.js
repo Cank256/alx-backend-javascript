@@ -6,7 +6,7 @@ export default class Car {
     this._brand = brand;
     this._motor = motor;
     this._color = color;
-    this[uniqueIdSymbol] = Symbol();
+    this[uniqueIdSymbol] = Symbol('unique identifier for cloning');
   }
 
   // Method to clone a car
