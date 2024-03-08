@@ -1,20 +1,17 @@
 #!/usr/bin/node
 export default class Building {
   constructor(sqft) {
-    if (new.target === Building) {
-      throw new Error('Cannot instantiate from Building, it is an abstract class');
-    }
+    if (typeof sqft !== 'number') throw TypeError('sqft must be a number');
 
     this._sqft = sqft;
+
+    // Ensure 'evacuationWarningMessage' is implemented in subclasses 
+    if (this.constructor === Building) {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
+    }
   }
 
-  // Getter for sqft
   get sqft() {
     return this._sqft;
-  }
-
-  // Method to ensure subclass implements evacuationWarningMessage
-  evacuationWarningMessage() {
-    throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 }
