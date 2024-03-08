@@ -1,20 +1,14 @@
 #!/usr/bin/node
-class ClassRoom {
+// 0-classroom.js
+export default class ClassRoom {
   constructor(maxStudentsSize) {
-    this.maxStudentsSize = maxStudentsSize;
+    if (typeof maxStudentsSize !== 'number' || maxStudentsSize <= 0) {
+      throw new Error('maxStudentsSize must be a positive number');
+    }
+    this._maxStudentsSize = maxStudentsSize;
   }
 
   get maxStudentsSize() {
-    return this.maxStudentsSize;
-  }
-
-  set maxStudentsSize(newSize) {
-    if (typeof newSize === 'number') {
-      this.maxStudentsSize = newSize;
-    } else {
-      console.log('Invalid value');
-    }
+    return this._maxStudentsSize;
   }
 }
-
-export default ClassRoom;
