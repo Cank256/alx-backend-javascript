@@ -9,6 +9,6 @@ export default class EVCar extends Car {
 
   // Override the cloneCar method
   cloneCar() {
-    return new this.Car(); // Ensures cloning as Car instance, not EVCar
+    return new Car(); // Ensures cloning as Car instance, not EVCar
   }
 }
