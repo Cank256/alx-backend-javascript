@@ -1,17 +1,17 @@
 #!/usr/bin/node
 export default class HolbertonClass {
   constructor(size, location) {
-    this.size = size;
-    this.location = location;
+    this._size = size;
+    this._location = location;
   }
 
   // Method to cast object to a number
   valueOf() {
-    return this.size;
+    return this._size;
   }
 
   // Method to cast object to a string
   toString() {
-    return this.location;
+    return this._location;
   }
 }

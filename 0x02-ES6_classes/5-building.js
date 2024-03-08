@@ -5,12 +5,12 @@ export default class Building {
       throw new Error('Cannot instantiate from Building, it is an abstract class');
     }
 
-    this.sqft = sqft;
+    this._sqft = sqft;
   }
 
   // Getter for sqft
   get sqft() {
-    return this.sqft;
+    return this._sqft;
   }
 
   // Method to ensure subclass implements evacuationWarningMessage

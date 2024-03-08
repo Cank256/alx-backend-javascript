@@ -4,26 +4,26 @@ import Currency from './3-currency.js';
 // 4-pricing.js file
 export default class Pricing {
   constructor(amount, currency) {
-    this.amount = amount;
-    this.currency = currency;
+    this._amount = amount;
+    this._currency = currency;
   }
 
   // Getter and setter for amount
   get amount() {
-    return this.amount;
+    return this._amount;
   }
 
   set amount(newAmount) {
-    this.amount = newAmount;
+    this._amount = newAmount;
   }
 
   // Getter and setter for currency
   get currency() {
-    return this.currency;
+    return this._currency;
   }
 
   set currency(newCurrency) {
-    this.currency = newCurrency;
+    this._currency = newCurrency;
   }
 
   // Method to display full price

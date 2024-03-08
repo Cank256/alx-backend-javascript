@@ -1,26 +1,26 @@
 #!/usr/bin/node
 export default class Currency {
   constructor(code, name) {
-    this.code = code;
-    this.name = name;
+    this._code = code;
+    this._name = name;
   }
 
   // Getter and setter for code
   get code() {
-    return this.code;
+    return this._code;
   }
 
   set code(newCode) {
-    this.code = newCode;
+    this._code = newCode;
   }
 
   // Getter and setter for name
   get name() {
-    return this.name;
+    return this._name;
   }
 
   set name(newName) {
-    this.name = newName;
+    this._name = newName;
   }
 
   // Method to display full currency name

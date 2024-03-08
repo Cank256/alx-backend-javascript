@@ -1,12 +1,12 @@
 #!/usr/bin/node
 export default class Airport {
   constructor(name, code) {
-    this.name = name;
-    this.code = code;
+    this._name = name;
+    this._code = code;
   }
 
   // Override default toString method
   toString() {
-    return `[object ${this.code}]`;
+    return `[object ${this._code}]`;
   }
 }
