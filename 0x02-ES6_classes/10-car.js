@@ -9,11 +9,8 @@ export default class Car {
     this[uniqueIdSymbol] = Symbol();
   }
 
+  // Method to clone a car
   cloneCar() {
-    const cloned = new Car(this._brand, this._motor, this._color);
-    // Preserve uniqueIds to avoid accidental equality 
-    cloned[uniqueIdSymbol] = this[uniqueIdSymbol]; 
-    return cloned;
+    return new this.constructor();
   }
 }
-
