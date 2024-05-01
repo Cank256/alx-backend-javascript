@@ -1,14 +1,11 @@
 #!/usr/bin/node
 
 // Display a welcome message and prompt the user to input their name
-process.stdout.write('Welcome to Holberton School, what is your name?\n');
+console.log('Welcome to Holberton School, what is your name?');
 
-// Listen for data input from the user
 process.stdin.on('data', (data) => {
-  process.stdout.write(`Your name is: ${data.toString().trim()}\n`);
-});
-
-// Listen for the close event
-process.on('close', () => {
-  process.stdout.write('This important software is closing\n');
+  const name = data.toString().trim();
+  console.log(`Your name is: ${name}`);
+  console.log('This important software is now closing');
+  process.exit(0);
 });
