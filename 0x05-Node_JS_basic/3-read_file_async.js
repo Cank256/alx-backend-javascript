@@ -12,12 +12,12 @@ async function countStudents(path) {
     const lines = data.split('\n').filter(Boolean); // Remove empty lines
     const fields = {};
     lines.slice(1).forEach((line) => {
-      const [firstName, lastName, age, field] = line.split(',');
+      const [firstName, field] = line.split(',');
       if (!fields[field]) fields[field] = [];
       fields[field].push(firstName);
     });
     console.log(`Number of students: ${lines.length - 1}`);
-    for (const field in fields) {
+    for (const field of Object.keys(fields)) {
       console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
     }
   } catch (err) {
