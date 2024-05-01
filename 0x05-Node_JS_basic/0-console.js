@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
 /**
- * Displays the message in STDOUT (standard output).
+ * Prints the message to the standard output.
  * @param {string} message - The message to be displayed.
  */
-function displayMessage (message) {
+function displayMessage(message) {
   console.log(message);
 }
 
