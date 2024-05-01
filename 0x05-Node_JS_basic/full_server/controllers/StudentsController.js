@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
-import { readDatabase } from '../utils';
+// import { readDatabase } from '../utils';
+const readDatabase = require('../utils');
 
 class StudentsController {
   static async getAllStudents(req, res) {
