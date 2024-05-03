@@ -11,7 +11,7 @@ describe('sendPaymentRequestToApi', function() {
 
         sendPaymentRequestToApi(100, 20);
 
-        sinon.assert.calledWithExactly(calculateNumberStub, 100, 20);
+        sinon.assert.calledWithExactly(calculateNumberStub,'SUM', 100, 20);
         sinon.assert.calledWithExactly(consoleLogSpy, 'The total is: 10');
 
         calculateNumberStub.restore();

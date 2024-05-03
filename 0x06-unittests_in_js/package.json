@@ -4,7 +4,7 @@
   "description": "0x06-unittests_in_js",
   "main": "0-calcul.js",
   "scripts": {
-    "test": "mocha --reporter spec --exit *.test.js"
+    "test": "mocha --reporter spec --exit"
   },
   "keywords": [],
   "author": "",

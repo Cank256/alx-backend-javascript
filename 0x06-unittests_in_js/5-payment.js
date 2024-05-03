@@ -1,20 +1,14 @@
 #!/usr/bin/node
-const assert = require('assert');
-const sinon = require('sinon');
-const sendPaymentRequestToApi = require('./4-payment');
 const Utils = require('./utils');
 
-describe('sendPaymentRequestToApi', function() {
-    it('should call Utils.calculateNumber with correct arguments and log correct message', function() {
-        const calculateNumberStub = sinon.stub(Utils, 'calculateNumber').returns(10);
-        const consoleLogSpy = sinon.spy(console, 'log');
+/**
+ * Sends a payment request to an API
+ * @param {number} totalAmount - The total amount
+ * @param {number} totalShipping - The total shipping cost
+ */
+function sendPaymentRequestToApi(totalAmount, totalShipping) {
+    const total = Utils.calculateNumber('SUM', totalAmount, totalShipping);
+    console.log(`The total is: ${total}`);
+}
 
-        sendPaymentRequestToApi(100, 20);
-
-        sinon.assert.calledWithExactly(calculateNumberStub, 100, 20);
-        sinon.assert.calledWithExactly(consoleLogSpy, 'The total is: 10');
-
-        calculateNumberStub.restore();
-        consoleLogSpy.restore();
-    });
-});
+module.exports = sendPaymentRequestToApi;
