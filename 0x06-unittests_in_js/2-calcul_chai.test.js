@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const chai = require('chai');
 const expect = chai.expect;
-const calculateNumber = require('./1-calcul');
+const calculateNumber = require('./1-calcul_chai');
 
 describe('calculateNumber', function() {
     describe('SUM operation', function() {
