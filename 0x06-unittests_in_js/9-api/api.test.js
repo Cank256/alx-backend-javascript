@@ -21,6 +21,7 @@ describe('Cart page', () => {
   it('Correct status code when :id is a number?', (done) => {
     request.get('http://localhost:7865/cart/12', (error, response, body) => {
       expect(response.statusCode).to.equal(200);
+      expect(body).to.equal('Payment methods for cart :id');
       done();
     });
   });
