@@ -1,8 +1,8 @@
 {
-    "name": "0x06-unittests_in_js",
+    "name": "8-qpi",
     "version": "1.0.0",
-    "description": "0x06-unittests_in_js",
-    "main": "0-calcul.js",
+    "description": "8-api",
+    "main": "api.js",
     "scripts": {
       "test": "mocha --reporter spec --exit"
     },
