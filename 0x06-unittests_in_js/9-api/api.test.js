@@ -26,6 +26,13 @@ describe('Cart page', () => {
     });
   });
 
+  it('Correct response when :id is a number?', (done) => {
+    request.get('http://localhost:7865/cart/12', (error, response, body) => {
+      expect(body).to.equal('Payment methods for cart :id');
+      done();
+    });
+  });
+
   it('Correct status code when :id is NOT a number (=> 404)?', (done) => {
     request.get('http://localhost:7865/cart/hello', (error, response, body) => {
       expect(response.statusCode).to.equal(404);
