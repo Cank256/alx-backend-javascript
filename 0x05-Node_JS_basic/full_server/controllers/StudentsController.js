@@ -7,9 +7,7 @@ class StudentsController {
   static async getAllStudents(req, res) {
     try {
       const fields = await readDatabase('database.csv');
-      res.status(200).send('This is the list of our students\n' + Object.entries(fields).map(([field, students]) =>
-        `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`
-      ).join('\n'));
+      res.status(200).send(`This is the list of our students\n${Object.entries(fields).map(([field, students]) => `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`).join('\n')}`);
     } catch (error) {
       res.status(500).send(error.message);
     }
